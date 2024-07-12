@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 error</title>
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: "Work Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        #app {
+            height: 100%;
+            width: 100%;
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="signUpWindow">
+            <div class="signUpWindowContent">
+                <h1>Sign Up</h1>
+                <input type="text" placeholder="Username">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Password">
+                <button>Sign Up</button>
+                <button onclick="closeModal()">Close</button>
+            </div>
+        </div>
+        <header class="header">
+            <div class="logo"></div>
+            <div class="buttonBar">
+                <button>games</button>
+                <button>how to play</button>
+                <button>company</button>
+                <button onclick="openModal()">sign up</button>
+            </div>
+        </header>
+        <div class="error"><h1>404 error not found</h1></div>
+        <footer class="footer">
+            <div>
+                <img src="./assets/logoMain.png" alt="">
+                <div class="socialBar">
+                    <img src="./assets/social/foursqare.svg" alt="">
+                    <img src="./assets/social/steam.svg" alt="">
+                    <img src="./assets/social/tumblr.svg" alt="">
+                    <img src="./assets/social/yt.svg" alt="">
+                    <img src="./assets/social/vk.svg" alt="">
+                </div>
+            </div>
+            <hr>
+            <div>
+                <span>© Copyright 2024 Free Games. All rights reserved.</span>
+                <div>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>

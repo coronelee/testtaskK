@@ -1,6 +1,10 @@
 let header = document.querySelector(".header");
 let local = location.pathname;
 console.log(local)
+
+if (local != "/") {
+    window.open("error.html");
+}
 window.addEventListener("scroll", () => {
     header.classList.toggle("sticky", window.scrollY > 0);
 })
