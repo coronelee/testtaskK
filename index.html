@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WakeUP</title>
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: "Work Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        #app {
+            height: 100%;
+            width: 100%;
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="signUpWindow">
+            <div class="signUpWindowContent">
+                <h1>Sign Up</h1>
+                <input type="text" placeholder="Username">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Password">
+                <button>Sign Up</button>
+                <button onclick="closeModal()">Close</button>
+            </div>
+        </div>
+        <header class="header">
+            <div class="logo"></div>
+            <div class="buttonBar">
+                <button>games</button>
+                <button>how to play</button>
+                <button>company</button>
+                <button onclick="openModal()">sign up</button>
+            </div>
+        </header>
+        <main class="main">
+            <div class="video">
+                <div class="shadow"></div>
+                <video autoplay loop muted>
+                    <source src="./assets/tmp2_bg_vid.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="mainContent">
+                <img src="./assets/logoMain.png" alt="">
+                <button onclick="openModal()">sign up</button>
+                <div class="socialBar">
+                    <img src="./assets/social/foursqare.svg" alt="">
+                    <img src="./assets/social/steam.svg" alt="">
+                    <img src="./assets/social/tumblr.svg" alt="">
+                    <img src="./assets/social/yt.svg" alt="">
+                    <img src="./assets/social/vk.svg" alt="">
+                </div>
+            </div>
+            <div class="announcement">
+                <span class="announcementText">Announcement !!!</span>
+                <img class="announcementLogo" src="./assets/logoMain.png" alt="">
+                <span class="announcementText">New Game !!!</span>
+            </div>
+
+        </main>
+        <div class="games">
+            <img src="./assets/catbg.png" alt="cat">
+            <div>
+                <h1>FREE GAMES OFF WEBSITE</h1>
+                <h3>Free games are slot machines / online casinos / blackjack and more, more, more games!!!</h3>
+                <div class="gamesItems">
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+        </div>
+        <div class="packs">
+            <div class="packsContent">
+                <h1>FREE GAMES PACKS</h1>
+                <h3>Introducing our exclusive line of FREE GAME PACKS! Each pack contains five one-of-a-kind games
+                    designed to bring excitement and entertainment to any party. With a mix of titles that cater to
+                    everyone in the room, Zoom call, or Twitch stream, you'll find a diverse range of games to keep your
+                    guests engaged. From drawing games to writing games, trivia games, and hidden identity games, our
+                    free game packs ensure that no party-goer is left behind. So far, we've created 10 unique packs,
+                    each offering a different blend of games to keep your gatherings memorable. Join the fun and get
+                    ready to experience the thrill of FREE GAME PACKS!</h3>
+                <div class="packsItems">
+                    <button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button><button></button>
+                </div>
+            </div>
+        </div>
+        <div class="blog">
+            <div class="contentBlog">
+                <h1>FREE GAMES BLOG</h1>
+                <div>
+                    <button>Lorem ipsum dolor sit amet consectetur adipisicing elit.</button>
+                    <button>Lorem ipsum dolor sit amet consectetur adipisicing elit.</button>
+                    <button>Lorem ipsum dolor sit amet consectetur adipisicing elit.</button>
+                    <button>Lorem ipsum dolor sit amet consectetur adipisicing elit.</button>
+                </div>
+                <button>Visit the Free Games Blog</button>
+            </div>
+        </div>
+        <div class="feedback">
+            <div class="contentFeedback">
+                <div>
+                    <span>GATHER FRIEND NEAR OR FAR</span>
+                    <img src="./assets/flower.svg" alt="">
+                </div>
+                <div>
+                    <b>FREE GAMES GAMES ARE FOR PALS</b>
+                    <span>Your other players don't need to buy anything to join your game - just make sure everybody can
+                        see the host screen and you're in for a good time.</span>
+                    <b>FOLLOW US ON SOCIAL MEDIA</b>
+                    <div class="socialBar">
+                        <img src="./assets/social/foursqare.svg" alt="">
+                        <img src="./assets/social/steam.svg" alt="">
+                        <img src="./assets/social/tumblr.svg" alt="">
+                        <img src="./assets/social/yt.svg" alt="">
+                        <img src="./assets/social/vk.svg" alt="">
+                    </div>
+                    <b>JOIN OUR NEWSLETTER</b>
+                    <span>Stay up to date on all things Free Games, including news, updates, teasers, and
+                        exclusives.</span>
+                    <input type="text" class="inputFeedback" placeholder="Email address">
+                    <button>Submit</button>
+                </div>
+            </div>
+        </div>
+        <div class="questions">
+            <div class="questionsContent">
+                <div>
+                    <img src="./assets/monk.svg" alt="">
+                </div>
+                <div>
+                    <b>STILL HAVE QUESTIONS?</b>
+                    <span>We’ll do our best below! And if you don’t find what you’re looking for, check out How to
+                        Play.</span>
+                    
+                    <div>
+                        <div onclick="openQ(1)" class="question"><span>What is Jackbox Games?</span> <span id="1plus">+</span></div>
+                        <span id="1answer">
+                            Jackbox Games is the party game-making studio best known for hit games like YOU DON’T KNOW
+                            JACK, Quiplash, Fibbage, Drawful, Trivia Murder Party, and more! Think of us as the child of
+                            classic social games like ‘charades’… the child who dropped out of college, then earned the
+                            family’s respect by founding a jam company.
+
+                            Maybe you heard about us from an article, stream, commercial, or on social media. Maybe you
+                            heard about us from a friend. Either way, glad to meet you: we’re here to make parties and
+                            gatherings with loved ones weird, fun, and memorable.
+                        </span>
+                    </div>
+                    <div>
+                        <div onclick="openQ(2)" class="question"><span>What is Jackbox Games?</span> <span id="2plus">+</span></div>
+                        <span id="2answer">
+                            Jackbox Games is the party game-making studio best known for hit games like YOU DON’T KNOW
+                            JACK, Quiplash, Fibbage, Drawful, Trivia Murder Party, and more! Think of us as the child of
+                            classic social games like ‘charades’… the child who dropped out of college, then earned the
+                            family’s respect by founding a jam company.
+
+                            Maybe you heard about us from an article, stream, commercial, or on social media. Maybe you
+                            heard about us from a friend. Either way, glad to meet you: we’re here to make parties and
+                            gatherings with loved ones weird, fun, and memorable.
+                        </span>
+                    </div>
+                    <div>
+                        <div onclick="openQ(3)" class="question"><span>What is Jackbox Games?</span> <span id="3plus">+</span></div>
+                        <span id="3answer">
+                            Jackbox Games is the party game-making studio best known for hit games like YOU DON’T KNOW
+                            JACK, Quiplash, Fibbage, Drawful, Trivia Murder Party, and more! Think of us as the child of
+                            classic social games like ‘charades’… the child who dropped out of college, then earned the
+                            family’s respect by founding a jam company.
+
+                            Maybe you heard about us from an article, stream, commercial, or on social media. Maybe you
+                            heard about us from a friend. Either way, glad to meet you: we’re here to make parties and
+                            gatherings with loved ones weird, fun, and memorable.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div>
+                <img src="./assets/logoMain.png" alt="">
+                <div class="socialBar">
+                    <img src="./assets/social/foursqare.svg" alt="">
+                    <img src="./assets/social/steam.svg" alt="">
+                    <img src="./assets/social/tumblr.svg" alt="">
+                    <img src="./assets/social/yt.svg" alt="">
+                    <img src="./assets/social/vk.svg" alt="">
+                </div>
+            </div>
+            <hr>
+            <div>
+                <span>© Copyright 2024 Free Games. All rights reserved.</span>
+                <div>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>
